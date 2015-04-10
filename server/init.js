@@ -32,6 +32,7 @@
 // 	});
 // });
 
-Meteor.startup(function () {
-	process.env.MONGO_URL = 'mongodb://root:edubab8Iby@proximus.modulusmongo.net:27017/monUso7v?autoReconnect=true&connectTimeoutMS=60000';
-});
+// Remote url for mongodb set up as environment
+//Meteor.startup(function () {
+//	process.env.MONGO_URL = 'mongodb://root:edubab8Iby@proximus.modulusmongo.net:27017/monUso7v?autoReconnect=true&connectTimeoutMS=60000';
+//});
