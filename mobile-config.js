@@ -5,7 +5,7 @@ App.info({
   	description: 'Community seller and buyer communication',
   	author: 'Junior',
   	email: '3210jr@gmail.com',
-  	website: 'http://jay-45002.onmodulus.net/'
+  	website: 'http://jay.meteor.com'
 });
 
 // App.icons({
