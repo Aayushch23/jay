@@ -9,23 +9,23 @@
 					<!-- <div class=" img-rounded"></div> -->
 					<img src="{{image}}" id="preview" class="img-rounded holder" alt="">
 					<p>Images cannot be updated</p>
-					
+
 				<hr>
 				</div>
 				<div class="col-md-4 pull-right">
 					<div class="form-group">
 				      <label for="disabledSelect">Category</label>
 				      <select id="" name="category" class="form-control">
-				        <option value="for-sale">For Sale</option>
-				        <option value="housing">Housing</option>
-				        <option value="jobs">Jobs</option>
-				        <option value="community">Community</option>
-				        <option value="services">Services</option>
-				        <option value="wanted">Wanted</option>
+				        <option value="for-sale" selected="{{selectData 'for-sale'}}">For Sale</option>
+				        <option value="housing" selected="{selectData 'housing'}}">Housing</option>
+				        <option value="jobs" selected="{{selectData 'jobs'}}">Jobs</option>
+				        <option value="community" selected="{{selectData 'community'}}">Community</option>
+				        <option value="services" selected="{{selectData 'services'}}">Services</option>
+				        <option value="wanted" selected="{{selectData 'wanted'}}">Wanted</option>
 				      </select>
 				  	</div>
 
-					
+
 					<div class="checkbox">
 					  <label>
 					    <input type="checkbox" name="accept" value="true" checked>
@@ -74,9 +74,6 @@
 		</form>
 		<br><br><br><br>
 		</div>
-		
+
 	</div>
 </template>
-
-
-

@@ -21,7 +21,7 @@ Template.userAccess.events({
 			}
 		});
 	}
-})
+});
 
 
 Template.register.events({
@@ -31,7 +31,7 @@ Template.register.events({
 		Accounts.createUser({
 			username: t.find('#registerName').value,
 			password: t.find('#registerPassword').value,
-			
+
 		}, function (err) {
 			if(err) {
 				alert(err.message);
@@ -82,6 +82,6 @@ Template.signOut.events({
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    
+
   });
 }
