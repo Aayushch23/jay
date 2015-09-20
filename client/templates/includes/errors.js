@@ -9,4 +9,4 @@ Template.error.rendered = function () {
 	Meteor.setTimeout(function () {
 		Errors.remove(error._id);
 	}, 3000);
-}
+};

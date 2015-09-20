@@ -8,7 +8,7 @@ Template.userAccess.helpers({
 
 Accounts.onLogin(function () {
 	$('.close').click();
-});
+}); 
 
 
 Template.userAccess.events({

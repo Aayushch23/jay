@@ -8,4 +8,4 @@ Template.footerTabs.events({
 	'click #myAccount': function () {
 		Router.go('account');
 	}
-})
+});

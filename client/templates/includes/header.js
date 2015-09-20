@@ -8,7 +8,7 @@ Template.header.events({
 	},
 	'submit .search': function (e) {
 		e.preventDefault();
-		
+
 		var toSearch = $(e.target).find('[name=search]').val();
 		// var reg = toSearch;
 

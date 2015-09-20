@@ -1,10 +1,10 @@
 Template.postSubmit.created = function () {
 	Session.set('postSubmitErrors', {});
-}
+};
 
 Template.postSubmit.helpers({
 	myFormData: function () {
-		return { directoryName: 'images', prefix: this._id, _id: this._id }
+		return { directoryName: 'images', prefix: this._id, _id: this._id };
 	},
 	filesToUpload: function () {
 		return Uploader.info.get();
@@ -18,11 +18,11 @@ Template.postSubmit.helpers({
 });
 
 /**
- * Convert an image 
+ * Convert an image
  * to a base64 url
- * @param  {String}   url         
- * @param  {Function} callback    
- * @param  {String}   [outputFormat=image/png]           
+ * @param  {String}   url
+ * @param  {Function} callback
+ * @param  {String}   [outputFormat=image/png]
  */
 // function convertImgToBase64URL(url, callback, outputFormat){
 //     var canvas = document.createElement('CANVAS'),
@@ -36,7 +36,7 @@ Template.postSubmit.helpers({
 //         ctx.drawImage(img, 0, 0);
 //         dataURL = canvas.toDataURL(outputFormat);
 //         callback(dataURL);
-//         canvas = null; 
+//         canvas = null;
 //     };
 //     img.src = url;
 // }
@@ -56,7 +56,7 @@ Template.postSubmit.events({
 			};
 
 			// var src = $('#preview').src;
-			
+
 		var post = {
 			image: $('#preview').attr('src'),//imageData(),
 			category: $(e.target).find('[name=category]').val(),
@@ -74,23 +74,18 @@ Template.postSubmit.events({
 		var errors = validatePost(post);
 		if (errors.title || errors.category || errors.price || errors.number || errors.description || errors.location) {
 			return Session.set('postSubmitErrors', errors);
-		};
+		}
 
 		Meteor.call('postInsert', post, function (error, result) {
 			// display error to user and abort
 			if (error) {
 				return throwError(error.reason);
-			};
-			//show this result but route anyway
-			// if (result.postExists) {
-			// 	throwError()
-			// }
+			}
+
 			Session.set('imageData', null);
 			Router.go('postPage', {_id: result._id});
 		});
 
-		// post._id = Posts.insert(post);
-		// Router.go('postPage', post);
 	},
 	'click #preview': function () {
 		// MeteorCamera.getPicture([options], callback)
@@ -98,13 +93,7 @@ Template.postSubmit.events({
 		$('#fileInput').change(function () {
 			encodeImageFileAsURL();
 		});
-		
-		// MeteorCamera.getPicture({}, function (error, data) {
-		// 	console.log("errors: "+error);
-		// 	var pic = data;
 
-		// 	$('#preview').attr('src', pic);
-		// });
 	}
 
 });
@@ -113,7 +102,7 @@ Template.postSubmit.events({
 // function below is to attach event listener to the meteor plugin for image uploads
 // Template.postSubmit.rendered = function () {
 // 	if (!Meteor.isCordova) {
-// 		setTimeout(function(){ 
+// 		setTimeout(function(){
 // 			var browse = document.getElementsByClassName('jqUploadclass');
 // 			browse[0].onchange = function (event) {
 // 				var reader = new FileReader();
@@ -143,5 +132,5 @@ Template.postSubmit.events({
 
 //alert('online form builder');
 // Template.postSubmit.helpers({
-// 	src: 
+// 	src:
 // });
