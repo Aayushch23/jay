@@ -1,5 +1,8 @@
 # jay
 
+<h1>Depreciated!</h1>
+<h4>This project is no longer maintained.</h4>
+
 For a working version <a href="http://jay.meteor.com/">Click here</a>
 
 This is a simple classifieds posting application that works on both mobile and desktop browsers.
